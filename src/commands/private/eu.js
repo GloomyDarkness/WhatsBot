@@ -2,7 +2,10 @@ module.exports = {
     config: {
         name: 'eu'
     },
-    run: (client, message) => {
-        client.sendMessage(message.from, 'te amo')
+    run: async (client, message) => {
+        const chat = await message.getChat();
+        console.log(chat.isGroup)
+
+        client.sendMessage(message.from, 'oi')
     }
 }

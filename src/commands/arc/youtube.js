@@ -21,9 +21,6 @@ module.exports = {
 
         const media = await MessageMedia.fromUrl(data.items[0].snippet.thumbnails.high.url)
         message.reply(media, null, { caption: `✅ Resultado encontrado!\n\n*Título:* ${data.items[0].snippet.title}\n\n*Descrição:* ${data.items[0].snippet.description}\n\n*Link:* https://www.youtube.com/watch?v=${data.items[0].id.videoId} \n\n*Canal:* ${data.items[0].snippet.channelTitle} ` })
-
-        console.log(data.items[0].snippet)
-
     }
 }
 
